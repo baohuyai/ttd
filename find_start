@@ -1,4 +1,6 @@
-function love.draw()
-    love.graphics.print("Mouse X: " .. love.mouse.getX(), 10, 10)
-    love.graphics.print("Mouse Y: " .. love.mouse.getY(), 10, 30)
-end
+local mouse = game.Players.LocalPlayer:GetMouse()
+
+mouse.Move:Connect(function()
+    print("Mouse X:", mouse.X)
+    print("Mouse Y:", mouse.Y)
+end)
