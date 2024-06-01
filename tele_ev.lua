@@ -16,17 +16,5 @@ if player then
 
         -- Dịch chuyển nhân vật đến tọa độ đích
         humanoidRootPart.CFrame = CFrame.new(targetPosition)
-
-        -- Đợi một chút trước khi nhấn nút "Bắt đầu"
-        wait(1)
-
-        -- Tìm đối tượng nút "Bắt đầu"
-        local startButton = game.Workspace:FindFirstChild("Bắt đầu")  -- Thay đổi tên đối tượng theo yêu cầu của bạn
-        if startButton then
-            -- Kích hoạt sự kiện nhấn nút
-            startButton:FireServer()
-        else
-            print("Không tìm thấy đối tượng nút 'Bắt đầu'")
-        end
     end
 end
