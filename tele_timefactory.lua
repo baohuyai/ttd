@@ -12,22 +12,21 @@ if player then
         local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
 
         -- Xác định tọa độ đích
-        local targetPosition = Vector3.new(0, 10, 0)  -- Thay đổi tọa độ đích theo yêu cầu của bạn
+        local targetPosition = Vector3.new(x, y, z)  -- Thay đổi tọa độ đích theo yêu cầu của bạn
 
         -- Dịch chuyển nhân vật đến tọa độ đích
         humanoidRootPart.CFrame = CFrame.new(targetPosition)
 
-        -- Đợi một chút trước khi bắt đầu wave
+        -- Đợi một chút trước khi nhấn nút "Bắt đầu"
         wait(1)
 
-        -- Bắt đầu wave
-        -- Giả sử có một đối tượng hoặc hàm cụ thể để bắt đầu wave
-        -- Ví dụ: game.Workspace.WaveStarter:FireServer() hoặc tương tự
-        local waveStarter = game.Workspace:FindFirstChild("WaveStarter")  -- Thay đổi theo yêu cầu của bạn
-        if waveStarter then
-            waveStarter:FireServer()  -- Gọi hàm bắt đầu wave
+        -- Tìm đối tượng nút "Bắt đầu"
+        local startButton = game.Workspace:FindFirstChild("Bắt đầu")  -- Thay đổi tên đối tượng theo yêu cầu của bạn
+        if startButton then
+            -- Kích hoạt sự kiện nhấn nút
+            startButton:FireServer()
         else
-            print("Không tìm thấy đối tượng để bắt đầu wave")
+            print("Không tìm thấy đối tượng nút 'Bắt đầu'")
         end
     end
 end
