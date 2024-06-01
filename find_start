@@ -1,0 +1,18 @@
+local playerGui = player:WaitForChild("PlayerGui")
+
+        -- Tìm đối tượng nút "Bắt đầu" trong GUI
+        local startButton = playerGui:FindFirstChild("StartButton", true)  -- Tìm nút trong toàn bộ cây GUI
+        if startButton then
+            -- Kết nối sự kiện nhấn nút với hàm xử lý
+            startButton.MouseButton1Click:Connect(function()
+                print("Nút 'Bắt đầu' đã được nhấn")
+                -- Gọi hàm bắt đầu wave nếu cần thiết
+            end)
+
+            -- Tự động nhấn nút "Bắt đầu"
+            startButton:MouseButton1Click()
+        else
+            print("Không tìm thấy đối tượng nút 'Bắt đầu'")
+        end
+    end
+end
