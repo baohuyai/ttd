@@ -1,4 +1,3 @@
-
 highChestOnly = true
 godsChalicSniper = false
 repeat task.wait(4) until game:IsLoaded()
@@ -189,4 +188,3 @@ task.spawn(function()
         end
     end
 end)
-1
