@@ -87,7 +87,7 @@ task.spawn(function()
     end
 end)
 
-local AllowRunService = true
+local AllowRunService = false
 local AllowRunServiceBind = Instance.new("BindableFunction")
 function AllowRunServiceBind.OnInvoke(args)
     if args == "ON" then
@@ -97,8 +97,8 @@ function AllowRunServiceBind.OnInvoke(args)
     end
     local CoreGui = game:GetService("StarterGui")
     CoreGui:SetCore("SendNotification", {
-        Title = "Script Fram Chest",
-        Text = "By: TÃªn",
+        Title = "Script Event",
+        Text = "By: Lô",
         Icon = "rbxthumb://type=Asset&id=17214886676&w=150&h=150",
         Duration = math.huge,
         Callback = AllowRunServiceBind,
@@ -122,8 +122,8 @@ end)
 
 local CoreGui = game:GetService("StarterGui")
 CoreGui:SetCore("SendNotification", {
-    Title = "Script Fram Chest",
-    Text = "By: TÃªn",
+    Title = "Script Event",
+    Text = "By: Lô",
     Icon = "rbxthumb://type=Asset&id=17214886676&w=150&h=150",
     Duration = math.huge,
     Callback = AllowRunServiceBind,
